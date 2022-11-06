@@ -236,6 +236,8 @@ if __name__ == '__main__':
                 
                 point1 = [x_robot, y_robot, z_robot+20, -179, 0, -90]
                 
+               
+                
                 point_home = [473.58, -140.29, 469.22, -179, 0.27, -90]
                 run_point_MOVJ(move, point1)
                 wait_arrive(point1)
@@ -245,6 +247,30 @@ if __name__ == '__main__':
                 dashboard.ToolDO(1,1)
                 dashboard.ToolDO(2,1)
                 sleep(1)
+
+                point_scanbarcode = [639.77,446.00,462.40,-178.33,0.22,-44.73] #poin scanbarcobe
+                run_point_MOVJ(move,point_scanbarcode)
+                wait_arrive(point_scanbarcode)
+                sleep(1)
+
+
+
+
+                point_final = [286.65,423.10,471.82,-175.45,0.27,-18.23] #poin_final
+                run_point_MOVJ(move,point_final)
+                wait_arrive(point_final)
+                sleep(1)
+
+
+                # open 0%
+                #dashboard.ToolDO(1,1)
+                #dashboard.ToolDO(2,1)
+                #sleep(1)
+
+                # open 100%
+                dashboard.ToolDO(1,0)
+                dashboard.ToolDO(2,0)
+                sleep(1)
                 
                 run_point_MOVJ(move, point_home)
                 wait_arrive(point_home)
@@ -252,9 +278,9 @@ if __name__ == '__main__':
 
  
                 # open 100%
-                dashboard.ToolDO(1,0)
-                dashboard.ToolDO(2,0)
-                sleep(1)
+                #dashboard.ToolDO(1,0)
+                #dashboard.ToolDO(2,0)
+                #sleep(1)
             
             
             #concate color image and depth image

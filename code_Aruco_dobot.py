@@ -4,10 +4,12 @@ import cv2.aruco as aruco # pip3 install opencv-contrib-python
 import pyrealsense2 as rs # pip3 install pyrealsense2
 import numpy as np
 from scipy.spatial import distance as dist
-
 import threading
 from dobot_api import DobotApiDashboard, DobotApi, DobotApiMove, MyType
 from time import sleep
+
+
+
 
 current_actual = None
 
